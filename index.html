@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="c_style.css" />
+	<link rel="stylesheet" href="view.css" />
+  <script src="http://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="svg.min.js" type="text/javascript"></script>
+	<script src="svgmaker.js" type="text/javascript"></script>
+  <script src="codeEditor.js" type="text/javascript"></script>
+	<script src="tabs.js" type="text/javascript"></script>
+	<script src="toolWidget.js" type="text/javascript"></script>
+	<script src="view.js" type="text/javascript"></script>
+  <script src="highlighter.js" type="text/javascript"></script>
+  <script src="lg_c.js" type="text/javascript"></script>
+  </head>
+  <body>
+      <div id="editor">
+      </div>
+      <br>
+      <button id="save">Save</button>
+      <button id="load">Load</button>
+	
+	<script>
+	// Init view
+	//var w = window.innerWidth;
+	//var h = window.innerHeight;
+	
+	//var v = new View("view", w, h);
+	
+	// Initialise code editor here
+  var ce = new CodeEditor("editor", 500, 600);
+  ce.addLine(0, false)
+  ce.getCurrentLine().setEditable(true);
+  var hl = new Highlighter();
+  //hl.setSpecFromURL("/cgi-bin/language.pl?lg=c");
+  hl.setSpec(CSpec);
+
+  ce.linechange = function(oldl, newl) {
+    var content = ce.lines[oldl].element.innerHTML;
+    var hct = hl.Highlight(content);
+    ce.lines[oldl].element.innerHTML = hct;
+  };
+
+  $("#save").click(function() {
+    console.log("Sending save request...");
+    ce.save("/cgi-bin/save.pl", "test.txt", undefined, function(xhr) {
+      console.log("Saving: " + xhr.status + " (" + xhr.statusText + "); " + xhr.responseText);
+    });
+    console.log("Done !");
+  });
+
+  $("#load").click(function() {
+    console.log("Sending load request...");
+    ce.load("/cgi-bin/load.pl", "test.txt", undefined, function(xhr) {
+      console.log("Saving: " + xhr.status + " (" + xhr.statusText + "); " + xhr.responseText);
+    });
+    console.log("Done !");
+  });
+	</script>
+  </body>
+</html>
+

@@ -1,0 +1,121 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+#view {
+	background-color: #909090;
+}
+
+#view #left {
+	background-color: #A09090;
+}
+
+#view #left #tabs {
+	background-color: #90A090;
+}
+
+#view #right {
+	background-color: #9090A0;
+}
+
+.tab {
+	background-color: #C0C0B0;
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+	margin: 3px 0px 0px 5px;
+}
+
+.tab[selected="true"] {
+	font-weight: bold;
+}
+
+.tab[selected="false"] {
+	font-weight: normal;
+}
+
+#leftarrow, #rightarrow {
+	background-color: #90A0A0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#leftarrow {
+	border-right: 1px solid black;
+}
+
+#rightarrow {
+	border-left: 1px solid black;
+}
+
+#codeArea {
+	background-color: #A090A0;
+}
+
+.code {
+	background-color: #8090A0;
+	padding: 2px;
+}
+
+.toolwidget {
+	margin: 10px;
+	border: 1px solid black;
+	background-color: #E0E0E0;
+}
+
+.toolwidget .title {
+	font-weight: bold;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+
+.toolwidget > .topbar {
+	background-color: #C0C0C0;
+	border-bottom: 2px solid black;
+}
+
+.toolwidget .arrow {
+	background-color: #B0FFB0;
+}
+
+.toolbutton {
+	background-color: #FFFFFF;
+	margin: 5px;
+}
+
+.toolbutton[enabled="false"] {
+	background-color: #909090;
+}
+
+.toolbutton[hovered="true"] .text {
+	font-weight: bold;
+}
+
+.toolbutton[clicked="true"] {
+	background-color: #FF0000;
+}
+
+.toolcheckbox {
+	background-color: #FFFFB0;
+	margin: 5px;
+}
+
+.toolcheckbox[enabled="false"] {
+	background-color: #909090;
+}
+
+.toolcheckbox[hovered="true"] .text {
+	font-weight: bold;
+}
+
+.toolcheckbox[clicked="true"] {
+	background-color: #0000FF;
+}
+
+.toolcheckbox[checked="true"] {
+	background-color: #B0FFB0;
+}
+

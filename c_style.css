@@ -1,0 +1,99 @@
+[contenteditable="true"]:active,
+[contenteditable="true"]:focus {
+  border: none;
+  outline: none;
+  background-color: #E0E0E0;
+}
+
+.line {
+  /*border: 1px solid black;*/
+}
+
+.linenumber {
+  border-right: 1px solid black;
+  background-color: #b0b0b0;
+}
+
+#codeEditor {
+  font-family: Courier, monospace;
+}
+
+.keyword1 {
+  font-weight: bold;
+  color: #0000b0;
+}
+
+.keyword2 {
+  font-weight: bold;
+  color: #b000b0;
+}
+
+.keyword3 {
+  font-weight: bold;
+  color: #00b080;
+}
+
+.separator1 {
+  color: #ff0000;
+}
+
+.symbol1 {
+  font-weight: bold;
+  color: #000070;
+}
+
+.symbol2 {
+  color: #b0b000;
+}
+
+.symbol3 {
+  color: #006000;
+}
+
+.string1 {
+  color: #FF33cc;
+}
+
+.string2 {
+  color: #ffcc00;
+}
+
+.multiline2 {
+  color: #b0b0b0;
+}
+
+.singleline2 {
+  color: #808080;
+}
+
+.singleline3 {
+  color: #b88a00;
+}
+
+.number {
+  color: #3399ff;
+  font-style: italic;
+}
+
+.variable1 {
+  text-decoration: underline;
+}
+
+.variable2 {
+  text-decoration: overline;
+}
+
+.multiline1, .singleline1 {
+  color: #A0A0FF;
+}
+
+.doxykeyword1 {
+	font-weight: bold;
+}
+
+.doxysymbol1 {
+	font-weight: bold;
+	color: #9090FF;
+}
+
+
